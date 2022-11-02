@@ -1,0 +1,88 @@
+/* ----- Appointments.scss ----- */
+@import "../../Theme.scss";
+
+.appointments {
+  width: 100%;
+  height: 100vh;
+  // background-color: lightgreen;
+  @include flexbox;
+
+  .appointments__sidebar {
+    width: 20%;
+    height: 100%;
+    // background-color: lightcoral;
+    @include flexbox;
+  }
+  .appointments__content {
+    width: 80%;
+    height: 100%;
+    // background-color: lightgreen;
+
+    padding: 0px 20px;
+
+    .appointments__title {
+      width: 100%;
+      height: 70px;
+      // background-color: lightcoral;
+
+      @include flexbox;
+      .appointments__title__icon {
+        width: 50px;
+        height: 100%;
+        // background-color: lightpink;
+
+        @include flexbox;
+        justify-content: flex-start;
+      }
+      .appointments__title__text {
+        width: calc(100% - 50px);
+        height: 100%;
+        // background-color: lightblue;
+
+        @include flexbox;
+        justify-content: flex-start;
+
+        p {
+          font-size: $font-large;
+          font-weight: bold;
+          text-transform: uppercase;
+          color: $grey;
+        }
+      }
+    }
+
+    .appointments__controls {
+      width: 100%;
+      height: 70px;
+      // background-color: lightseagreen;
+
+      @include flexbox;
+      .appointments__controls__button {
+        width: 50%;
+        height: 100%;
+        // background-color: lightcoral;
+
+        @include flexbox;
+        justify-content: flex-start;
+      }
+      .appointments__controls__search {
+        width: 50%;
+        height: 100%;
+        // background-color: lightcyan;
+
+        @include flexbox;
+        justify-content: flex-end;
+      }
+    }
+
+    .appointments__items {
+      overflow-y: auto;
+      height: calc(100% - 250px);
+    }
+
+    .appointments__popup {
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+/* ----- Popup.scss ----- */
+@import "../../Theme.scss";
+
+.popup {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: $grey, $alpha: 0.5);
+  position: fixed;
+  top: 0px;
+  z-index: 2;
+
+  @include flexbox;
+  justify-content: flex-end;
+
+  .popup__container {
+    width: 30%;
+    height: 100vh;
+    background-color: $white;
+    box-shadow: -17px 0px 9px -16px rgba(68, 78, 99, 0.3);
+
+    padding: 10px 20px;
+
+    .popup__header {
+      width: 100%;
+      height: 50px;
+      // background-color: lightgreen;
+      @include flexbox;
+      margin-bottom: 20px;
+      .popup__header__createupdate {
+        width: 30%;
+        height: 100%;
+        // background-color: coral;
+
+        @include flexbox;
+        justify-content: flex-start;
+        margin-right: 10px;
+        .popup__header__update__button {
+        }
+      }
+      .popup__header__delete {
+        width: 30%;
+        height: 100%;
+        // background-color: pink;
+
+        @include flexbox;
+        justify-content: flex-start;
+        .popup__header__delete__button {
+        }
+      }
+      .popup__header__cancel {
+        width: 100%;
+        height: 100%;
+        // background-color: coral;
+
+        @include flexbox;
+        justify-content: flex-end;
+        :only-child {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .popup__body {
+      .popup__body__field {
+        min-height: 50px;
+        // background-color: lightgreen;
+        margin-bottom: 15px;
+        @include flexbox;
+        justify-content: flex-start;
+      }
+    }
+  }
+}

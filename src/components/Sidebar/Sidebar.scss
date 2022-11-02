@@ -1,0 +1,59 @@
+/* ----- Sidebar.scss ----- */
+@import "../../Theme.scss";
+
+.sidebar {
+  width: 100%;
+  height: 100%;
+    // background-color: lightblue;
+
+  @include flexbox;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  border-right: 1px dashed rgba($color: $grey, $alpha: 0.2);
+  .sidebar__logo {
+    width: 90%;
+    height: 80px;
+    // background-color: lightcoral;
+    @include flexbox;
+
+    img {
+      //   background-color: red;
+      height: 40px;
+    }
+  }
+
+  .sidebar__item {
+    width: 90%;
+    height: 45px;
+    // background-color: lightcoral;
+    @include flexbox;
+    justify-content: flex-start;
+
+    margin: 2px auto;
+    border-radius: 10px;
+
+    .sidebar__item__icon {
+      width: 40px;
+      height: 100%;
+      //   background-color: lightgreen;
+
+      @include flexbox;
+      justify-content: flex-start;
+      padding-left: 20px;
+    }
+    .sidebar__item__text {
+      width: calc(100% - 40px);
+      height: 100%;
+      //   background-color: lightpink;
+      padding-left: 20px;
+      @include flexbox;
+      justify-content: flex-start;
+      color: $grey;
+      p {
+        font-size: $font-small;
+        font-weight: 500;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+/* ----- Item.scss ----- */
+@import "../../Theme.scss";
+
+.item {
+  width: 100%;
+  height: 50px;
+  // background-color: lightgray;
+  // background-color: #eaf8f1;
+  :nth-child(odd) {
+    // background-color: coral;
+  }
+  :nth-child(even) {
+    // background-color: lime;
+  }
+  @include flexbox;
+  padding: 0px 10px;
+  margin: 5px 0px;
+  border-bottom: 1px dashed rgba($color: $grey, $alpha: 0.2);
+
+  .item__title {
+    width: 100%;
+    height: 100%;
+    @include flexbox;
+
+    p {
+      color: $grey;
+      font-size: $font-small;
+    }
+  }
+}

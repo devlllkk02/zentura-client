@@ -1,0 +1,110 @@
+/* ----- Dashboard.scss ----- */
+@import "../../Theme.scss";
+
+.dashboard {
+  width: 100%;
+  height: 100vh;
+  //   background-color: lightgreen;
+  @include flexbox;
+
+  .dashboard__sidebar {
+    width: 20%;
+    height: 100%;
+    // background-color: lightcoral;
+    @include flexbox;
+  }
+  .dashboard__content {
+    width: 80%;
+    height: 100%;
+    // background-color: lightgreen;
+
+    .dashboard__title {
+      width: 100%;
+      height: 70px;
+      // background-color: lightseagreen;
+
+      @include flexbox;
+
+      p {
+        color: $blue;
+        font-size: $font-extra-large;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+
+    .dashboard__cards {
+      width: 100%;
+      height: calc(100% - 70px);
+      // background-color: coral;
+
+      @include flexbox;
+      flex-wrap: wrap;
+
+      .dashboard__cards__row {
+        width: 100%;
+        height: 50%;
+        // background-color: lightpink;
+
+        @include flexbox;
+        justify-content: space-around;
+
+        .dashboard__card {
+          width: 300px;
+          height: 200px;
+          // background-color: lightgreen;
+
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px -2px rgba($color: $grey, $alpha: 0.2);
+          padding: 15px;
+
+          .dashboard__card__title {
+            width: 100%;
+            height: 50px;
+            // background-color: lightblue;
+
+            @include flexbox;
+            align-items: flex-end;
+            padding-bottom: 10px;
+
+            p {
+              color: $green;
+              font-size: $font-large;
+              font-weight: bold;
+            }
+          }
+          .dashboard__card__body {
+            width: 100%;
+            height: calc(100% - 50px);
+
+            @include flexbox;
+            .dashboard__card__image {
+              width: 50%;
+              height: 100%;
+              // background-color: lightcoral;
+
+              @include flexbox;
+
+              img {
+                height: 100px;
+                width: 100px;
+              }
+            }
+            .dashboard__card__count {
+              width: 50%;
+              height: 100%;
+              // background-color: lightsalmon;
+
+              @include flexbox;
+
+              p {
+                font-size: 42px;
+                color: $grey;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

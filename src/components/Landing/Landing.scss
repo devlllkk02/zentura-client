@@ -1,0 +1,57 @@
+/* ----- Landing.scss ----- */
+@import "../../Theme.scss";
+
+.landing {
+  width: 100%;
+  height: 100vh;
+  //   background-color: lightgreen;
+
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  //   background-size: auto 100%;
+
+  .landing__sidebar {
+    width: 40%;
+    height: 100vh;
+    background-color: rgba($color: $white, $alpha: 0.6);
+    // background-color: $white;
+    @include flexbox;
+    backdrop-filter: blur(10px);
+
+    .landing__container {
+      width: 100%;
+      height: 30%;
+      //   background-color: lightgreen;
+
+      @include flexbox;
+      flex-direction: column;
+
+      .landing__logo {
+        width: 100%;
+        height: 50%;
+        // background-color: lightblue;
+
+        @include flexbox;
+        img {
+          //   background-color: red;
+          width: 60%;
+          //   height: 100px;
+
+          object-fit: contain;
+        }
+      }
+      .landing__button {
+        width: 60%;
+        height: 50%;
+        // background-color: lightseagreen;
+
+        @include flexbox;
+
+        :nth-child(1) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
